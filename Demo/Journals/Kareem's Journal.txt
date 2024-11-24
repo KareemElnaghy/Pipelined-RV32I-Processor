@@ -1,0 +1,17 @@
+Oct 31, 10:45AM: Set up initial project files and simulation environment based on lab pipeline work.
+
+Nov 3, 2:15PM: Modified the immediate generator for compatibility with pipelined ALU operations.
+
+Nov 6, 11:30AM: Adjusted register write-back logic to align with single-cycle instruction execution.
+
+Nov 10, 10:00AM: Adapted pipeline to work with single-ported memory, issuing instructions every other cycle.
+
+Nov 10, 4:30PM: Verified data hazards were managed correctly with the new single-ported memory constraint.
+
+Nov 11, 10:15AM: Finalized and tested single-ported memory configuration, ensuring cycle alignment.
+
+Nov 12, 11:00AM: Collaborated with Jana to finalize the program generator code and ensure valid memory accesses.
+
+Nov 12, 2:30PM: Collaborated with Jana on final testing of the program generator to check its interaction with pipelined stages.
+
+Nov 13, 11:30AM: Ran program generator’s instruction sequences for comprehensive pipeline and hazard testing, with all instructions verified with Jana.

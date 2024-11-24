@@ -1,0 +1,17 @@
+Oct 30, 10:15AM: Reviewed lab pipeline implementation and started adapting it for MS3 requirements.
+
+Nov 3, 11:20AM: Integrated initial pipelined instruction fetch and decode stages.
+
+Nov 5, 10:00AM: Began developing the program generator in C++ for random instruction testing.
+
+Nov 5, 3:15PM: Ensured generated offsets remained within valid memory ranges.
+
+Nov 7, 11:45AM: Completed and tested random program generator with initial pipeline.
+
+Nov 10, 1:00PM: Updated forwarding unit for pipeline compatibility.
+
+Nov 10, 4:10PM: Fixed pipelining register inputs and outputs.
+
+Nov 12, 2:30PM: Collaborated with Kareem on final testing of the program generator to check its interaction with pipelined stages.
+
+Nov 13, 11:30AM: Verified memory read/write operations within valid range during last testing with Kareem.
