@@ -1,0 +1,96 @@
+lw x1, 0(x0)
+lw x2 , 4(x0)
+lw x3, 8(x0)
+
+
+# Test ADD
+add x4, x1, x2      # x4 = x1 + x2 (5 + 10 = 15)
+
+# Test SUB
+sub x5, x2, x1      # x5 = x2 - x1 (10 - 5 = 5)
+
+# Test AND
+and x6, x1, x2      # x6 = x1 & x2 (5 & 10)
+
+# Test OR
+or x7, x1, x3       # x7 = x1 | x3 (5 | 20)
+
+# Test XOR
+xor x8, x2, x3      # x8 = x2 ^ x3 (10 ^ 20)
+
+# Test SLL (Shift Left Logical)
+sll x9, x1, x2      # x9 = x1 << x2[4:0] (5 << 10[4:0])
+
+# Test SRL (Shift Right Logical)
+srl x10, x3, x1     # x10 = x3 >> x1[4:0] (20 >> 5[4:0])
+
+# Test SRA (Shift Right Arithmetic)
+sra x11, x3, x1     # x11 = x3 >> x1[4:0] (arithmetic shift)
+
+# Test SLT (Set Less Than)
+slt x12, x1, x2     # x12 = (x1 < x2) ? 1 : 0
+
+# Test SLTU (Set Less Than Unsigned)
+sltu x13, x3, x2    # x13 = (x3 < x2) ? 1 : 0 (unsigned comparison)
+
+# Test ADDI (Add Immediate)
+addi x14, x1, 3     # x14 = x1 + 3 (5 + 3 = 8)
+
+# Test ANDI (AND Immediate)
+andi x15, x2, 12    # x15 = x2 & 12
+
+# Test ORI (OR Immediate)
+ori x16, x3, 7      # x16 = x3 | 7
+
+# Test XORI (XOR Immediate)
+xori x17, x1, 4     # x17 = x1 ^ 4
+
+# Test SLLI (Shift Left Logical Immediate)
+slli x18, x1, 2     # x18 = x1 << 2
+
+# Test SRLI (Shift Right Logical Immediate)
+srli x19, x2, 1     # x19 = x2 >> 1
+
+# Test SRAI (Shift Right Arithmetic Immediate)
+srai x20, x3, 2     # x20 = x3 >> 2 (arithmetic shift)
+
+# Test LUI (Load Upper Immediate)
+lui x21, 0x12345    # x21 = 0x12345000
+
+# Test AUIPC (Add Upper Immediate to PC)
+auipc x22, 0x10     # x22 = current_PC + 0x1000
+
+# Test JAL (Jump and Link)
+jal x23, label      # x23 = PC + 4, jump to label
+
+# Test JALR (Jump and Link Register)
+jalr x24, x1, 0x8   # x24 = PC + 4, jump to x1 + 0x8
+
+# Test Branch Instructions
+beq x1, x2, skip    # if (x1 == x2) branch to skip
+bne x1, x3, skip    # if (x1 != x3) branch to skip
+blt x1, x2, skip    # if (x1 < x2) branch to skip
+bge x2, x1, skip    # if (x2 >= x1) branch to skip
+bltu x1, x3, skip   # if (x1 < x3) (unsigned) branch to skip
+bgeu x3, x1, skip   # if (x3 >= x1) (unsigned) branch to skip
+
+# Test Load Instructions
+
+sw x20, 12(x0)       # Load word from memory at address in x1 into x25
+
+# Test Store Instructions
+sw x2, 4(x1)        # Store x2 at memory address (x1 + 4)
+
+skip:
+  nop               # No operation
+
+label:
+  nop               # No operation
+
+
+# Test EBREAK (Environment Break)
+ebreak              # Used for debugging purposes
+
+ecall
+
+
